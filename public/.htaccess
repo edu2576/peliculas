@@ -1,0 +1,19 @@
+#Modo reescritura para el archivo index.php
+<IfModule mod_rewrite.c>
+
+# Activar RewriteEngine
+Options -Multiviews
+RewriteEngine on
+
+#RewriteBase /saya/public
+RewriteCond %(REQUEST_FILENAME) !=d
+RewriteCond %(REQUEST_FILENAME) !=f
+RewriteCond %(REQUEST_FILENAME) !=l
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png|ttf|woff|pdf)$ [NC]
+
+# Reescribir la URL solicitada por el usuario
+#   Entrada:  clientes/NOMBRE/
+#   Salida: index.php?control=nombre clientes.php?id=NOMBRE
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+</IfModule>

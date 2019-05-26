@@ -1,0 +1,35 @@
+img {
+	width: 200px;
+	height: 300px;
+	border-radius: 5px;
+}
+
+.iconos {
+	font-size: 30px;
+}
+
+.presentacion {
+	width: 600px;
+	margin-left:-300px;
+	position: absolute;
+	left:50%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 2%;
+	padding: 2px;
+}
+
+.tabla-presentacion {
+	margin: 2px;
+}
+
+.tabla-presentacion tr td {
+	padding: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+	.presentacion {
+		width: 100%;
+		margin-left: 0px;
+		left: 0%;
+	}
+}

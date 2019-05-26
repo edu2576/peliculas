@@ -1,0 +1,2 @@
+#Evitar listar los directorios de la carpeta app
+Options -Indexes

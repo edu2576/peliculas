@@ -1,0 +1,54 @@
+.mySlides {
+	width: 220px;
+}
+
+.foot-slide{
+	padding-left: 50%;
+	margin-bottom: -1px;
+}
+
+.tap {
+	width: 200px;
+	margin-left:-100px;
+	position: absolute;
+	left:50%;
+}
+
+section {
+	padding: 40px 265px 10px 265px
+}
+
+button {
+	width: 80px;
+	height: 40px;
+	border-radius: 10px;
+}
+
+.slider {
+	margin-top: 40px;
+	flex-wrap: wrap;
+	display: flex;
+	padding: 5px;
+}
+
+img {
+	width: 200px;
+	height: 300px;
+}
+@media only screen and (max-width: 900px) {
+	section {
+		padding: 1px 1px 1px 1px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	section {
+		padding: 1px 1px 1px 1px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	section {
+		padding: 1px 1px 1px 1px;
+	}
+}

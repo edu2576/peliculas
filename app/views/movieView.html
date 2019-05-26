@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Película</title>
+	</head>
+	<body>
+		<div id="mensaje"></div>
+		<section>
+			<form id="movie" data-method="<?php echo $this->method;?>">
+				<input type="hidden" id="id" name="id" value="<?php echo $this->result[0]['id'];?>">
+				<label>
+					Título
+				</label>
+				<input type="text" id="title" name="title" value="<?php echo $this->result[0]['title'];?>" required <?php echo $this->method == 'index' ? 'readonly' : '';?> >
+				<label>
+					Sinopsis
+				</label>
+				<textarea id="synopsis" name="synopsis">
+					<?php echo $this->result[0]['synopsis'];?>
+				</textarea>
+
+				<label>
+					Año
+				</label>
+				<input type="text" id="year" name="year" value="<?php echo $this->result[0]['year'];?>" required <?php echo $this->method == 'index' ? 'readonly' : '';?> >
+				<input type="button" id="guardar" name="guardar" value="<?php echo $this->action;?>">
+			</form>
+		</section>
+		<script type="text/javascript" src="<?php echo BASE_URL.'public/js/movie.js';?>"></script>
+	</body>
+</html>

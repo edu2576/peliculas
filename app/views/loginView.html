@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+	<body>
+		<header>
+			<span>
+				<?php echo $this->message;?>
+			</span>
+		</header>
+		<section>
+			<form action="<?php echo BASE_URL.'login/validate';?>" method="post">
+				<label>
+					Usuario
+				</label>
+				<input maxlength="20" type="text" name="user" id="user" value="" placeholder="Usuario">
+				<label>
+					Password
+				</label>
+				<input maxlength="255" type="password" name="pass" id="pass" value="">
+				<input type="submit" name="submit" id="submit" value="Login">
+			</form>
+		</section>
+	</body>
+</html>

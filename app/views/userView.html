@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User</title>
+	</head>
+	<body>
+		<div id="mensaje"></div>
+		<section>
+			<form id="user" data-method="<?php echo $this->method;?>">
+				<input type="hidden" id="id" name="id" value="<?php echo $this->result['id'];?>">
+				<label>
+					Nombre
+				</label>
+				<input type="text" id="name" name="name" value="<?php echo $this->result[0]['name'];?>" required <?php echo $this->method == 'index' ? 'readonly' : '';?> >
+				<label>
+					Usuario
+				</label>
+				<input type="text" id="nickname" name="nickname" value="<?php echo $this->result[0]['nickname'];?>"required <?php echo $this->method == 'index' ? 'readonly' : '';?> >
+				<label>
+					Contraseña
+				</label>
+				<input type="password" id="password" name="password" value="<?php echo $this->result[0]['password'];?>" required <?php echo $this->method == 'index' ? 'readonly' : '';?> >
+				<input type="button" id="guardar" name="guardar" value="<?php echo $this->action;?>">
+			</form>
+		</section>
+		<script type="text/javascript" src="<?php echo BASE_URL.'public/js/user.js';?>"></script>
+	</body>
+</html>

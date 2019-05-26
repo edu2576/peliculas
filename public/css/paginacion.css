@@ -1,0 +1,30 @@
+.paginacion {
+	margin:20px 0;
+}
+
+.contenedor {
+	list-style:none;
+	text-align: center;
+}
+
+.pagina {
+	display:inline-block;
+	margin-right:10px;
+}
+
+.boton {
+	display:block;
+	padding:5px 15px;
+	color:#fff;
+	background:#024959;
+	text-decoration: none;
+}
+
+.boton:hover {
+	background:#037E8C;
+}
+
+.active {
+	background:#037E8C;
+	font-weight:bold;
+}

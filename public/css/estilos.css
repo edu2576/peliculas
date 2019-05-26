@@ -1,0 +1,73 @@
+body {
+	background: #56576140;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+section {
+	padding: 40px 40px 10px 40px;
+	margin-top: 120px;
+}
+
+header {
+	padding: 20px;
+	background: #333;
+	height: 80px;
+
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+
+}
+
+
+/*
+ * Logo
+ */
+#logo-header {
+	color:	white;
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+#logo-header:hover {
+	color: #0b76a6;
+}
+
+#logo-header .site-name {
+	display: block;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+
+
+
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+	margin: 0 20px 0 20px;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+}
+
+nav ul li a {
+	color: white;
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background: #0b76a6;
+}
