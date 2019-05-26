@@ -1,0 +1,28 @@
+# ----------------------------------------------------------------------
+# UTF-8 encoding
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+    AddType text/css .css
+    AddType text/javascript .js
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+# Activar RewriteEngine
+Options All -Indexes
+RewriteEngine on
+
+RewriteCond %(REQUEST_FILENAME) !=d
+RewriteCond %(REQUEST_FILENAME) !=f
+RewriteCond %(REQUEST_FILENAME) !=l
+
+RewriteRule ^$ public/ [L]
+RewriteRule (.*)$ public/$1 [L]
+
+</IfModule>
