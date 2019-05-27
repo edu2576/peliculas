@@ -10,15 +10,19 @@
 		public $pass;
 		private $model;
 
+		/**
+         * @method __construct() verificamos si se ha iniciado sesión e instanciamos el modelo de login
+         */
 		public function __construct()
 		{
-
-
 			require_once ROOT_APP.DS.'models'.DS.'LoginModel.php';
 			$this->model = new LoginModel;
 			$this->message = '';
 		}
 
+		/**
+		 * @method index() entramos al formulario de login para iniciar sesión
+		 */
 		public function index()
 		{
 			if(isset($_SESSION['id']) and $_SESSION['id'] != 0)
@@ -29,6 +33,9 @@
 			require_once ROOT_APP.DS.'views'.DS.'loginView.html';
 		}
 
+		/**
+		 * @method validate() método para validar que el usuario exista y proceda a realizar el inicio de sesión
+		 */
 		public function validate()
 		{
 			if(isset($_SESSION['id']) and $_SESSION['id'] != 0)
@@ -60,6 +67,9 @@
 			}
 		}
 
+		/**
+		 * @method out() método desloguearse de la web
+		 */
 		public function out()
       	{
         	if(!empty($_SESSION['id']))

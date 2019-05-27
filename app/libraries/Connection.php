@@ -27,6 +27,11 @@
             }
         }
 
+        /**
+         * @method executeQuery() método para ejecutar consultas en la base de datos
+         * @param  string $sql Consulta que se realizará a la base de datos
+         * @return array[]      Datos que se consultan de la base de datos
+         */
         public function executeQuery($sql)
         {
             $query=$this->conexion->query($sql);
@@ -59,6 +64,13 @@
             return $resultSet;
         }
 
+        /**
+         * @method  insert() método para almacenar datos en la base de datos
+         * @param  string  $tabla   Nombre de la tabla en la que se va a insertar datos
+         * @param  array[] $_campos Array de nombres de los campos de la tabla
+         * @param  array[] $_datos  Array de datos que se va a insertar en la base de datos
+         * @return integer          Último id de la tabla
+         */
         public function insert($tabla, $_campos, $_datos)
         {
             $campos = implode(', ',$_campos);
@@ -75,7 +87,6 @@
             $sql ="INSERT INTO ".$tabla." (".$campos.")
                     VALUES (".$datos.")";
 
-            echo $sql;
             $query = $this->conexion->query($sql);
 
             if($this->conexion->error)
@@ -94,6 +105,14 @@
             return $this->conexion->insert_id;
         }
 
+         /**
+         * @method  update() método para modificar datos en la base de datos
+         * @param  string  $_id     Nombre del campo id de la tabla
+         * @param  integer $_value  Id que se va modificar en la base de datos
+         * @param  string  $tabla   Nombre de la tabla en la que se va a insertar datos
+         * @param  array[] $_datos  Array de datos que se va a insertar en la base de datos
+         * @return string
+         */
         public function update($_id, $_value, $tabla, $_datos)
         {
             $setArray = array();
@@ -125,11 +144,17 @@
             return $this->conexion->affected_rows;
         }
 
+        /**
+         * @method  delete() método para eliminar datos en la base de datos
+         * @param  string  $_id     Nombre del campo id de la tabla
+         * @param  integer $_value  Id que se va modificar en la base de datos
+         * @param  string  $tabla   Nombre de la tabla en la que se va a insertar datos
+         * @return string
+         */
         public function delete($_id, $_value, $tabla)
         {
             $sql = "DELETE FROM ".$tabla." WHERE ".$_id." = ".$_value;
 
-            echo $sql;
             $query=$this->conexion->query($sql);
 
             if($this->conexion->error)
@@ -144,7 +169,6 @@
                     }
                 }
             }
-
 
             return $query;
         }
