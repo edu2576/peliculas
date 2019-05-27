@@ -63,14 +63,14 @@ let validate = function(data){
 		mensaje += 'El campo nombre es obligatorio.\n';
 	}
 
-	if(!data.name.match(/^[a-z0-9_-\s]{5,}$/))
+	if(!data.name.match(/^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ0-9_-\s]{5,}$/))
 	{
-		mensaje += 'El campo usuario debe contar con cinco carácteres como mínimo.\n';
+		mensaje += 'El campo nombre debe contar con cinco carácteres como mínimo.\n';
 	}
 
 	if(!data.nickname && data.nickname == '')
 	{
-		mensaje += 'El campo usuario es obligatorio.\n';
+		mensaje += 'El campo nombre es obligatorio.\n';
 	}
 
 	if(!data.nickname.match(/^[A-Za-z0-9_]+$/))
@@ -85,7 +85,7 @@ let validate = function(data){
 
 	if(!data.password.match(/^(?=\w*\d)(?=\w*[A-Z])/))
 	{
-		mensaje += 'El campo password debe contar con mínimo una letra mayúscula y un número.\n';
+		mensaje += 'El campo contraseña debe contar con mínimo una letra mayúscula y un número.\n';
 	}
 
 	if(Object.keys(mensaje).length !== 0)

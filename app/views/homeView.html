@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<meta charset="UTF-8">
+		<meta http-equiv="Expires" content="0">
+  		<meta http-equiv="Last-Modified" content="0">
+  		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  		<meta http-equiv="Pragma" content="no-cache">
+		<title>Home</title>
+		<link rel="StyleSheet" href="<?php echo BASE_URL.'public/bootstrap/bootstrap.min.css';?>" type="text/css" media="screen">
 	</head>
 	<body>
 		<header>
-
+			<div class="navbar navbar-dark bg-dark shadow-sm">
+				<a href="<?php echo BASE_URL.'init';?>" class="navbar-brand d-flex align-items-center">
+					Home
+				</a>
+				<a class="btn btn-outline-primary" href="<?php echo BASE_URL.'login/out';?>">Sign up</a>
+			</div>
 		</header>
 		<nav>
-			<a href="<?php echo BASE_URL.'user';?>">Administración de usuarios</a>
-			<a href="<?php echo BASE_URL.'movie';?>">Administración de películas</a>
+			<div class="container">
+				<div class="jumbotron mt-3">
+					<h3>Administración de usuarios</h3>
+
+					<a class="btn btn-lg btn-primary" href="<?php echo BASE_URL.'user';?>">Ingresar</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="jumbotron mt-3">
+					<h3>Administración de películas</h3>
+					<a class="btn btn-lg btn-primary" href="<?php echo BASE_URL.'movie';?>">Ingresar</a>
+				</div>
+			</div>
 		</nav>
-		<section>
-
-		</section>
-		<footer>
-		</footer>
-
 	</body>
 </html>

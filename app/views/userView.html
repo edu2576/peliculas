@@ -14,7 +14,7 @@
 		<header>
 			<div class="navbar navbar-dark bg-dark shadow-sm">
 				<a href="<?php echo BASE_URL.'init';?>" class="navbar-brand d-flex align-items-center">
-					Web
+					Home
 				</a>
 				<a class="btn btn-outline-primary" href="<?php echo BASE_URL.'login/out';?>">Sign up</a>
 			</div>
@@ -25,10 +25,11 @@
     			<div class="row">
         			<div class="col-md-12">
             			<div class="well well-sm">
-							<div id="mensaje"></div>
+							<div id="mensaje" class="alert alert-danger"></div>
 							<form class="form-horizontal" id="user" data-method="<?php echo $this->method;?>">
 								<fieldset>
                         			<legend class="text-center header">Usuario</legend>
+                        			<hr>
                         			<div class="form-group">
 										<input type="hidden" id="id" name="id" value="<?php echo $this->result['id'];?>">
 										<label for="name" class="control-label">
